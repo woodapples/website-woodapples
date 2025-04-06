@@ -1,0 +1,14 @@
+<div class="auth-container">
+    <div *ngIf="showLogin">
+      <app-login></app-login> <!-- Login-Komponente -->
+    </div>
+  
+    <div *ngIf="!showLogin">
+      <app-register></app-register> <!-- Registrierungs-Komponente -->
+    </div>
+  
+    <button (click)="toggleForm()">
+      {{ showLogin ? 'Zum Registrieren wechseln' : 'Zum Login wechseln' }}
+    </button>
+  </div>
+  

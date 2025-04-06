@@ -1,0 +1,22 @@
+<div class="card flex justify-center">
+    <div class="flex flex-col gap-4">
+        <p-message severity="error" icon="pi pi-times-circle" styleClass="mb-2">Validation Failed</p-message>
+            <div class="flex flex-col gap-1">
+                <div class="card flex justify-center">
+                    <p-iftalabel>
+                       <input pInputText id="username" [(ngModel)]="user.username" autocomplete="off" />
+                       <label for="username">Username</label>
+                   </p-iftalabel>
+               </div>
+                <p-message severity="error" variant="simple" size="small">Username is required</p-message>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p-iftalabel>
+                    <p-password [(ngModel)]="user.password" inputId="password" />
+                    <label for="password">Password</label>
+                </p-iftalabel>
+            <p-message severity="error" variant="simple" size="small">Email is not valid</p-message>
+        </div>
+    </div>
+</div>
+  
